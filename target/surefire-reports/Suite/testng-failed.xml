@@ -7,8 +7,11 @@
         <methods>
           <include name="test_02_Schedule_Demo"/>
           <include name="afterEachMethod"/>
-          <include name="beforeSuite"/>
           <include name="beforeEachMethod"/>
+          <include name="test_01_Get_Title"/>
+          <include name="beforeSuite"/>
+          <include name="test_04_Careers_page"/>
+          <include name="test_03_Broken_Link"/>
         </methods>
       </class> <!-- entrata_Test_Test_Scripts.Entrata_Test -->
     </classes>

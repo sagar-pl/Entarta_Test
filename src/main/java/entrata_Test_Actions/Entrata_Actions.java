@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import dataSources.PropertiesReader;
@@ -159,7 +160,6 @@ public class Entrata_Actions {
 	}
 
 	// Careers page
-
 	public void Dashboard_page() {
 
 		WebWait.elementToBeClickable(driver, entrat_Locators.get_Schedule_Demo(), Duration.ofSeconds(30));
@@ -205,7 +205,7 @@ public class Entrata_Actions {
 		String Job_FilterResult = entrat_Locators.get_msg_JobNotification().getText();
 		System.out.println(Job_FilterResult);
 		Assert.assertEquals("No job postings match these filters.Go back to all job postings".replaceAll("\\s+", ""),
-				Job_FilterResult.replaceAll("\\s+", ""));
+		Job_FilterResult.replaceAll("\\s+", ""));
 
 	}
 
@@ -216,6 +216,7 @@ public class Entrata_Actions {
 		enter_emailId();
 		enter_Company_Name();
 		enter_PhoneNo();
+		select_Unit_Count();
 	}
 
 	public void Broken_Link() {

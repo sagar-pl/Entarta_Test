@@ -2,6 +2,8 @@ package initializer;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
+
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -34,7 +36,7 @@ public class BaseClass {
 
 		driver = BrowserFactory.setBrowser(); // Set the browser name which you want
 		driver.get(PropertiesReader.getPropertyValue(WebCommonPath.testDatafile, "url"));// Pass Url from Propeties
-		driver.manage().window().maximize();
+		driver.manage().window().setSize(new Dimension(1920, 1080));
 		logger = report.startTest(testMethod.getName());
 		logger.log(LogStatus.INFO, "Browser Launched with :- " + driver.getCurrentUrl());
 
